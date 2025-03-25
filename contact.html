@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Paralegal Hive</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="logo">
+          <h1><a href="index.html">Paralegal Hive</a></h1>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="virtual-paralegal-services.html" aria-label="Virtual Paralegal Services">Services</a></li>
+          <li><a href="why-us.html" aria-label="Why Us">Why Us</a></li>
+          <li><a href="faq.html" aria-label="FAQ">FAQ</a></li>
+          <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+          <li><a href="software.html" aria-label="Integrations">Integrations</a></li>
+          <li><a href="careers.html" aria-label="Careers">Careers</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- MAIN CONTENT -->
+  <main class="contact-page container">
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>Ready to get started or have questions about our services? Fill out the form below or call us directly.</p>
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+      <div class="back-home-container">
+        <a href="index.html" class="back-home" aria-label="Back to Home">← Back to Home</a>
+      </div>
+    </div>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="virtual-paralegal-services.html">Services</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="software.html">Integrations</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
