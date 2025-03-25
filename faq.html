@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ | Paralegal Hive</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- AOS Library for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="logo">
+          <h1><a href="{{ url_for('index') }}">Paralegal Hive</a></h1>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="{{ url_for('services') }}" aria-label="Virtual Paralegal Services">Services</a></li>
+          <li><a href="{{ url_for('why_us') }}" aria-label="Why Us">Why Us</a></li>
+          <li><a href="{{ url_for('faq') }}" class="active-link" aria-label="FAQ">FAQ</a></li>
+          <li><a href="{{ url_for('contact') }}" aria-label="Contact">Contact</a></li>
+          <li><a href="{{ url_for('integrations') }}" aria-label="Integrations">Integrations</a></li>
+          <li><a href="{{ url_for('careers') }}" aria-label="Careers">Careers</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-main hero-faq">
+    <div class="hero-content container">
+      <div class="hero-text">
+        <h2>Got Questions?<br>We've Got Answers</h2>
+        <p class="hero-subtitle">Everything you need to know about our virtual paralegal services</p>
+        <div class="hero-cta">
+          <a href="{{ url_for('contact') }}" class="cta-button primary" aria-label="Contact Us">Ask Us Anything</a>
+          <a href="#faq-section" class="cta-button secondary" aria-label="View FAQs">Browse FAQs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- MAIN CONTENT -->
+  <main id="faq-section" class="faq-section">
+    <div class="container">
+      <div class="faq-grid" data-aos="fade-up">
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-question">
+            <div class="question-content">
+              <i class="fas fa-balance-scale question-icon"></i>
+              <span>Are your paralegals experienced in my practice area?</span>
+            </div>
+            <i class="fas fa-plus toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes – our team comes from diverse legal backgrounds to ensure expertise across various fields.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+          <button class="faq-question">
+            <div class="question-content">
+              <i class="fas fa-lock question-icon"></i>
+              <span>How do you ensure confidentiality?</span>
+            </div>
+            <i class="fas fa-plus toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We use secure, encrypted channels and follow strict data protection protocols to protect your data.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+          <button class="faq-question">
+            <div class="question-content">
+              <i class="fas fa-tasks question-icon"></i>
+              <span>Can you handle both ongoing and overflow work?</span>
+            </div>
+            <i class="fas fa-plus toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Whether you need consistent monthly support or help during peak periods, we're here to assist.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+          <button class="faq-question">
+            <div class="question-content">
+              <i class="fas fa-gavel question-icon"></i>
+              <span>How do your paralegals adapt to different areas of law?</span>
+            </div>
+            <i class="fas fa-plus toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Our paralegals are trained to work across a wide range of legal fields and tailor their support to your specific needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+          <button class="faq-question">
+            <div class="question-content">
+              <i class="fas fa-tools question-icon"></i>
+              <span>Can your paralegals work with my firm's existing tools and software?</span>
+            </div>
+            <i class="fas fa-plus toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Our team is proficient in a variety of legal software, ensuring seamless integration with your systems.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-cta" data-aos="fade-up">
+        <h2>Still have questions?</h2>
+        <p>We're here to help! Reach out to our team for personalized assistance.</p>
+        <div class="cta-buttons">
+          <a href="{{ url_for('contact') }}" class="cta-button primary">Schedule a Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content container">
+      <ul class="footer-nav">
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('why_us') }}">Why Us</a></li>
+        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('integrations') }}">Integrations</a></li>
+        <li><a href="{{ url_for('careers') }}">Careers</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Paralegal Hive. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollToTopBtn" aria-label="Scroll to top">↑</button>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  </script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

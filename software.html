@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Integrations - Paralegal Hive</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- AOS Library for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="logo">
+          <h1><a href="{{ url_for('index') }}">Paralegal Hive</a></h1>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="{{ url_for('services') }}" aria-label="Virtual Paralegal Services">Services</a></li>
+          <li><a href="{{ url_for('why_us') }}" aria-label="Why Us">Why Us</a></li>
+          <li><a href="{{ url_for('faq') }}" aria-label="FAQ">FAQ</a></li>
+          <li><a href="{{ url_for('contact') }}" aria-label="Contact">Contact</a></li>
+          <li><a href="{{ url_for('integrations') }}" class="active-link" aria-label="Integrations">Integrations</a></li>
+          <li><a href="{{ url_for('careers') }}" aria-label="Careers">Careers</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-main hero-software">
+      <div class="hero-content container">
+        <div class="hero-text">
+          <h2>Powerful Software Integrations</h2>
+          <p class="hero-subtitle">Seamlessly connect your practice with industry-leading legal tech solutions</p>
+          <div class="hero-cta">
+            <a href="{{ url_for('contact') }}" class="cta-button primary" aria-label="Schedule Consultation">Get Started</a>
+            <a href="#software-list" class="cta-button secondary" aria-label="View Integrations">Explore Tools</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="software-list" class="software-list">
+      <div class="section-title container">
+        <h2>Tools We Work With</h2>
+        <p>Some of the popular platforms we can integrate with:</p>
+      </div>
+      <div class="software-grid container">
+        <div class="software-item">
+          <a href="https://www.actionstep.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/Actionstep-Logo-RGB.png') }}" alt="Actionstep Logo" class="software-logo" />
+          </a>
+          <h3>Actionstep</h3>
+          <p>Complete practice management including workflow automation and case tracking.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.clio.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/Logo_Clio Logo Blue.png') }}" alt="Clio Logo" class="software-logo" />
+          </a>
+          <h3>Clio</h3>
+          <p>We handle document drafting, case notes, and scheduling directly within Clio.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.docusign.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/Bringing-Agreements-Tagline-Logo.png') }}" alt="DocuSign Logo" class="software-logo" />
+          </a>
+          <h3>DocuSign</h3>
+          <p>Prepare and send documents for e-signature in seconds, streamlining client paperwork.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.dropbox.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/dropbox-logo.png') }}" alt="Dropbox Logo" class="software-logo" />
+          </a>
+          <h3>Dropbox</h3>
+          <p>Secure file storage and sharing; keep everything synced for quick access and updates.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/gmail logo.png') }}" alt="Gmail Logo" class="software-logo" />
+          </a>
+          <h3>Gmail</h3>
+          <p>Efficiently manage client communications and attachments within your Google workspace.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/google-drive-logo.png') }}" alt="Google Drive Logo" class="software-logo" />
+          </a>
+          <h3>Google Drive</h3>
+          <p>Collaborate on documents in real-time, with version control and easy sharing.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://outlook.live.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/outlook-logo.png') }}" alt="Microsoft Outlook Logo" class="software-logo" />
+          </a>
+          <h3>Outlook</h3>
+          <p>Calendar syncing, email management, and structured client communications via Outlook.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/microsoft-teams-logo.png') }}" alt="Microsoft Teams Logo" class="software-logo" />
+          </a>
+          <h3>Microsoft Teams</h3>
+          <p>Instant messaging, video calls, and file collaboration to keep your practice connected.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.mycase.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/mycase-logo.png') }}" alt="MyCase Logo" class="software-logo" />
+          </a>
+          <h3>MyCase</h3>
+          <p>Manage case timelines, client messaging, and filings with streamlined MyCase workflows.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.nulaw.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/nulaw-logo.png') }}" alt="NuLaw Logo" class="software-logo" />
+          </a>
+          <h3>NuLaw</h3>
+          <p>Automate practice management on Salesforce with powerful insights and legal tools.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.practicepanther.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/practicepanther-logo.png') }}" alt="PracticePanther Logo" class="software-logo" />
+          </a>
+          <h3>PracticePanther</h3>
+          <p>Track billable hours, automate workflows, and keep case details all in one place.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.signnow.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/signnow-logo.png') }}" alt="SignNow Logo" class="software-logo" />
+          </a>
+          <h3>SignNow</h3>
+          <p>Quick and legally binding e-signatures, form creation, and document routing features.</p>
+        </div>
+        <div class="software-item">
+          <a href="https://www.smokeball.com" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='images/smokeball-logo.png') }}" alt="Smokeball Logo" class="software-logo" />
+          </a>
+          <h3>Smokeball</h3>
+          <p>Increase productivity with automated forms, time-tracking, and smart workflows.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content container">
+      <ul class="footer-nav">
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('why_us') }}">Why Us</a></li>
+        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('integrations') }}">Integrations</a></li>
+        <li><a href="{{ url_for('careers') }}">Careers</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Paralegal Hive. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollToTopBtn" aria-label="Scroll to top">↑</button>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers - Join Our Virtual Paralegal Team | Paralegal Hive</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- AOS Library for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="logo">
+          <h1><a href="{{ url_for('index') }}">Paralegal Hive</a></h1>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="{{ url_for('services') }}" aria-label="Virtual Paralegal Services">Services</a></li>
+          <li><a href="{{ url_for('why_us') }}" aria-label="Why Us">Why Us</a></li>
+          <li><a href="{{ url_for('faq') }}" aria-label="FAQ">FAQ</a></li>
+          <li><a href="{{ url_for('contact') }}" aria-label="Contact">Contact</a></li>
+          <li><a href="{{ url_for('integrations') }}" aria-label="Integrations">Integrations</a></li>
+          <li><a href="{{ url_for('careers') }}" class="active-link" aria-label="Careers">Careers</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-main hero-careers">
+    <div class="hero-content container">
+      <div class="hero-text">
+        <h2>Join Our Virtual Paralegal Team</h2>
+        <p class="hero-subtitle">Work from home, set flexible hours, and earn $22/hr while supporting leading law firms</p>
+        <div class="hero-cta">
+          <a href="#apply-now" class="cta-button primary" aria-label="Apply Now">Apply Now</a>
+          <a href="#benefits" class="cta-button secondary" aria-label="Learn More">See Benefits</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Why Work With Us?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="benefit-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Work From Home</h3>
+            <p>Enjoy the flexibility of working remotely from anywhere in the country.</p>
+          </div>
+          
+          <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="benefit-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Flexible Hours</h3>
+            <p>Set your own schedule and maintain work-life balance.</p>
+          </div>
+          
+          <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="benefit-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h3>Competitive Pay</h3>
+            <p>Earn $22/hour with opportunities for bonuses and growth.</p>
+          </div>
+          
+          <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="benefit-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Professional Growth</h3>
+            <p>Access ongoing training and development opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="requirements-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Requirements</h2>
+        <div class="requirements-grid">
+          <div class="requirements-list" data-aos="fade-up">
+            <ul>
+              <li><i class="fas fa-check"></i> Paralegal certificate or equivalent experience</li>
+              <li><i class="fas fa-check"></i> Minimum 2 years of paralegal experience</li>
+              <li><i class="fas fa-check"></i> Strong computer and technology skills</li>
+              <li><i class="fas fa-check"></i> Excellent written and verbal communication</li>
+              <li><i class="fas fa-check"></i> Ability to work independently</li>
+              <li><i class="fas fa-check"></i> Reliable high-speed internet connection</li>
+              <li><i class="fas fa-check"></i> Dedicated home office space with personal computer/laptop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply-now" class="application-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Apply Now</h2>
+        <div class="application-form-container" data-aos="fade-up">
+          <form class="application-form" action="{{ url_for('submit_application') }}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="full_name">Full Name *</label>
+              <input type="text" id="full_name" name="full_name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="experience">Years of Experience *</label>
+              <select id="experience" name="experience" required>
+                <option value="">Select years of experience</option>
+                <option value="2-3">2-3 years</option>
+                <option value="4-5">4-5 years</option>
+                <option value="6+">6+ years</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="practice_areas">Practice Areas (select all that apply) *</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="practice_areas[]" value="corporate"> Corporate Law</label>
+                <label><input type="checkbox" name="practice_areas[]" value="litigation"> Litigation</label>
+                <label><input type="checkbox" name="practice_areas[]" value="real-estate"> Real Estate</label>
+                <label><input type="checkbox" name="practice_areas[]" value="family"> Family Law</label>
+                <label><input type="checkbox" name="practice_areas[]" value="immigration"> Immigration</label>
+                <label><input type="checkbox" name="practice_areas[]" value="intellectual-property"> Intellectual Property</label>
+                <label><input type="checkbox" name="practice_areas[]" value="other"> Other</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="resume">Upload Resume (PDF only) *</label>
+              <input type="file" id="resume" name="resume" accept=".pdf" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="cover_letter">Cover Letter</label>
+              <textarea id="cover_letter" name="cover_letter" rows="5"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <button type="submit" class="submit-button">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content container">
+      <ul class="footer-nav">
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('why_us') }}">Why Us</a></li>
+        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('integrations') }}">Integrations</a></li>
+        <li><a href="{{ url_for('careers') }}">Careers</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Paralegal Hive. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollToTopBtn" aria-label="Scroll to top">↑</button>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  </script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 

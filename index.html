@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paralegal Hive – Professional Virtual Paralegal Services</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="logo">
+          <h1><a href="{{ url_for('index') }}">Paralegal Hive</a></h1>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="{{ url_for('services') }}" aria-label="Virtual Paralegal Services">Services</a></li>
+          <li><a href="{{ url_for('why_us') }}" aria-label="Why Us">Why Us</a></li>
+          <li><a href="{{ url_for('faq') }}" aria-label="FAQ">FAQ</a></li>
+          <li><a href="{{ url_for('contact') }}" aria-label="Contact">Contact</a></li>
+          <li><a href="{{ url_for('integrations') }}" aria-label="Integrations">Integrations</a></li>
+          <li><a href="{{ url_for('careers') }}" aria-label="Careers">Careers</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-main hero-home">
+    <div class="hero-content container">
+      <div class="hero-text">
+        <h2>Expert Virtual Paralegal Support</h2>
+        <p class="hero-subtitle">Empowering Law Firms with Professional Paralegal Services</p>
+        <div class="hero-cta">
+          <a href="{{ url_for('contact') }}" class="cta-button primary" aria-label="Schedule Consultation">Schedule a Consultation</a>
+          <a href="{{ url_for('services') }}" class="cta-button secondary" aria-label="View Services">View Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="services-overview">
+    <div class="container">
+      <h2 class="section-title">Comprehensive Legal Support Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-file-contract"></i>
+          <h3>Document Preparation</h3>
+          <p>Expert drafting of legal documents, pleadings, and correspondence</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-search"></i>
+          <h3>Legal Research</h3>
+          <p>Thorough case law research and legal analysis</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-tasks"></i>
+          <h3>Case Management</h3>
+          <p>Efficient organization and tracking of case files and deadlines</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Calendar Management</h3>
+          <p>Comprehensive scheduling and deadline tracking</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS SECTION -->
+  <section class="why-choose-us">
+    <div class="container">
+      <h2 class="section-title">Why Choose Paralegal Hive?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <i class="fas fa-user-tie"></i>
+          <h3>Professional Expertise</h3>
+          <p>Experienced paralegals with diverse legal backgrounds</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Confidentiality</h3>
+          <p>Strict adherence to client confidentiality and data security</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-clock"></i>
+          <h3>Quick Turnaround</h3>
+          <p>Efficient service delivery meeting tight deadlines</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>Cost-Effective</h3>
+          <p>Flexible pricing without compromising quality</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Streamline Your Legal Practice?</h2>
+      <p>Let us handle the paralegal work while you focus on serving your clients.</p>
+      <a href="{{ url_for('contact') }}" class="cta-button primary" aria-label="Get Started">Get Started Today</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content container">
+      <ul class="footer-nav">
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('why_us') }}">Why Us</a></li>
+        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('integrations') }}">Integrations</a></li>
+        <li><a href="{{ url_for('careers') }}">Careers</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Paralegal Hive. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollToTopBtn" aria-label="Scroll to top">↑</button>
+  
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
