@@ -113,7 +113,7 @@
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Apply Now</h2>
         <div class="application-form-container" data-aos="fade-up">
-          <form class="application-form" action="https://formspree.io/f/xanedgkw" method="POST" enctype="multipart/form-data">
+          <form class="application-form" action="https://formspree.io/f/xanedgkw" method="POST">
             <div class="form-group">
               <label for="full_name">Full Name *</label>
               <input type="text" id="full_name" name="full_name" required>
@@ -121,8 +121,7 @@
             
             <div class="form-group">
               <label for="email">Email Address *</label>
-              <!-- Changed to _replyto so Formspree can respond -->
-              <input type="email" id="email" name="_replyto" required>
+              <input type="email" id="email" name="email" required>
             </div>
             
             <div class="form-group">
@@ -151,16 +150,6 @@
                 <label><input type="checkbox" name="practice_areas[]" value="intellectual-property"> Intellectual Property</label>
                 <label><input type="checkbox" name="practice_areas[]" value="other"> Other</label>
               </div>
-            </div>
-            
-            <div class="form-group">
-              <label for="upload">Upload Resume (PDF only) *</label>
-              <input type="file" id="upload" name="upload" accept=".pdf" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="cover_letter">Cover Letter</label>
-              <textarea id="cover_letter" name="cover_letter" rows="5"></textarea>
             </div>
             
             <!-- Hidden field for redirecting to your thank-you page after submission -->
