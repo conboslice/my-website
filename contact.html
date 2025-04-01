@@ -34,7 +34,8 @@
     <div class="contact-container">
       <h1>Contact Us</h1>
       <p>Ready to get started or have questions about our services? Fill out the form below or call us directly.</p>
-      <form class="contact-form">
+      <!-- Updated form tag with action and method -->
+      <form class="contact-form" action="sendmail.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Your Name" required>
         
@@ -42,7 +43,7 @@
         <input type="email" id="email" name="email" placeholder="you@example.com" required>
         
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+        <input type="tel" id="phone" name="phone" placeholder="(555)555-5555" required>
         
         <label for="message">Message:</label>
         <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
