@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Software Integrations - Paralegal Hive</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- AOS Library for scroll animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container">
       <nav class="navbar" aria-label="Main Navigation">
         <div class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="Paralegal Hive Logo"></a>
+          <!-- Replace "Paralegalhive-logo.jpg" with the correct path/filename -->
+          <a href="index.html">
+            <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="logo-img">
+          </a>
         </div>
         <ul class="nav-menu" id="navMenu">
           <li><a href="virtual-paralegal-services.html" aria-label="Virtual Paralegal Services">Services</a></li>
@@ -31,7 +38,6 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero-main hero-software">
       <div class="hero-content container">
@@ -102,7 +108,8 @@
           <p>Calendar syncing, email management, and structured client communications via Outlook.</p>
         </div>
         <div class="software-item">
-          <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank"
+            rel="noopener noreferrer">
             <img src="images/microsoft-teams-logo.png" alt="Microsoft Teams Logo" class="software-logo" />
           </a>
           <h3>Microsoft Teams</h3>
@@ -159,7 +166,12 @@
         <li><a href="careers.html">Careers</a></li>
       </ul>
       <div class="footer-bottom">
-        <p>&copy; 2024 Paralegal Hive. All rights reserved.</p>
+        <div class="d-flex" style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="mb-0">&copy; 2024 Paralegal Hive. All rights reserved.</p>
+          <a href="index.html">
+            <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="footer-logo">
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -177,4 +189,5 @@
     });
   </script>
 </body>
+
 </html>

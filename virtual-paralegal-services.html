@@ -13,26 +13,28 @@
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="site-header" id="siteHeader">
-    <div class="container">
-      <nav class="navbar" aria-label="Main Navigation">
-        <div class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="Paralegal Hive Logo"></a>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="virtual-paralegal-services.html" aria-label="Virtual Paralegal Services">Services</a></li>
-          <li><a href="why-us.html" aria-label="Why Us">Why Us</a></li>
-          <li><a href="faq.html" aria-label="FAQ">FAQ</a></li>
-          <li><a href="contact.html" aria-label="Contact">Contact</a></li>
-          <li><a href="software.html" aria-label="Integrations">Integrations</a></li>
-          <li><a href="careers.html" aria-label="Careers">Careers</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">☰</button>
-      </nav>
-    </div>
-  </header>
-  
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">
+        <!-- Replace "Paralegalhive-logo.jpg" with the correct path/filename -->
+        <a href="index.html">
+          <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="logo-img">
+        </a>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="virtual-paralegal-services.html" aria-label="Virtual Paralegal Services">Services</a></li>
+        <li><a href="why-us.html" aria-label="Why Us">Why Us</a></li>
+        <li><a href="faq.html" aria-label="FAQ">FAQ</a></li>
+        <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+        <li><a href="software.html" aria-label="Integrations">Integrations</a></li>
+        <li><a href="careers.html" aria-label="Careers">Careers</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">☰</button>
+    </nav>
+  </div>
+</header>
   <!-- HERO SECTION -->
   <section class="hero-main hero-services">
     <div class="hero-content container">
@@ -180,7 +182,12 @@
         <li><a href="careers.html">Careers</a></li>
       </ul>
       <div class="footer-bottom">
-        <p>&copy; 2024 Paralegal Hive. All rights reserved.</p>
+        <div class="d-flex" style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="mb-0">&copy; 2024 Paralegal Hive. All rights reserved.</p>
+          <a href="index.html">
+            <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="footer-logo">
+          </a>
+        </div>
       </div>
     </div>
   </footer>

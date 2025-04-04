@@ -14,7 +14,10 @@
     <div class="container">
       <nav class="navbar" aria-label="Main Navigation">
         <div class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="Paralegal Hive Logo"></a>
+          <!-- Replace "Paralegalhive-logo.jpg" with the correct path/filename -->
+          <a href="index.html">
+            <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="logo-img">
+          </a>
         </div>
         <ul class="nav-menu" id="navMenu">
           <li><a href="virtual-paralegal-services.html" aria-label="Virtual Paralegal Services">Services</a></li>
@@ -28,7 +31,6 @@
       </nav>
     </div>
   </header>
-  
   <!-- MAIN CONTENT -->
   <main class="contact-page container">
     <div class="contact-container">
@@ -59,25 +61,39 @@
     </div>
   </main>
   
-  <!-- FOOTER -->
-  <footer class="site-footer">
+   <!-- FOOTER -->
+   <footer class="site-footer">
     <div class="footer-content container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h3>Quick Links</h3>
-          <ul class="footer-nav">
-            <li><a href="virtual-paralegal-services.html">Services</a></li>
-            <li><a href="why-us.html">Why Us</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="software.html">Integrations</a></li>
-            <li><a href="careers.html">Careers</a></li>
-          </ul>
+      <ul class="footer-nav">
+        <li><a href="virtual-paralegal-services.html">Services</a></li>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="software.html">Integrations</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <div class="d-flex" style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="mb-0">&copy; 2024 Paralegal Hive. All rights reserved.</p>
+          <a href="index.html">
+            <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="footer-logo">
+          </a>
         </div>
       </div>
     </div>
   </footer>
-  
+
+  <button id="scrollToTopBtn" aria-label="Scroll to top">↑</button>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
