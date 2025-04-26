@@ -14,7 +14,6 @@
     <div class="container">
       <nav class="navbar" aria-label="Main Navigation">
         <div class="logo">
-          <!-- Replace "Paralegalhive-logo.jpg" with the correct path/filename -->
           <a href="index.html">
             <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="logo-img">
           </a>
@@ -31,40 +30,53 @@
       </nav>
     </div>
   </header>
+
   <!-- MAIN CONTENT -->
-  <main class="contact-page container">
-    <div class="contact-container">
-      <h1>Contact Us</h1>
-      <p>Ready to get started or have questions about our services? Fill out the form below or call us directly.</p>
-      <!-- Updated form tag with Formspree endpoint -->
-      <form class="contact-form" action="https://formspree.io/f/xanedgkw" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        
-        <label for="email">Email:</label>
-        <!-- Formspree expects the email field to be named _replyto -->
-        <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
-        
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
-        
-        <!-- Hidden field for redirection after submission -->
-        <input type="hidden" name="_next" value="thank-you.html">
-        <button type="submit">Submit</button>
-      </form>
-      <div class="back-home-container">
-        <a href="index.html" class="back-home" aria-label="Back to Home">← Back to Home</a>
+  <main class="contact-page container" style="padding: 100px 20px 60px 20px;">
+    <h1 style="text-align: center; margin-bottom: 20px;">Contact Us</h1>
+    <p style="text-align: center; margin-bottom: 40px;">Ready to get started or have questions about our services? You can schedule a consultation below or send us a message using the form.</p>
+
+    <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1200px; margin: auto; align-items: start;">
+      
+      <!-- Calendly Embed -->
+      <div class="calendly-container" style="background: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; margin-bottom: 20px;">Schedule a Consultation</h2>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/connor-paralegalhive" style="min-width:320px;height:600px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-container" style="background: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; margin-bottom: 20px;">Send Us a Message</h2>
+        <form class="contact-form" action="https://formspree.io/f/xanedgkw" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required style="width: 100%; margin-bottom: 10px; padding: 10px;">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="_replyto" placeholder="you@example.com" required style="width: 100%; margin-bottom: 10px; padding: 10px;">
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required style="width: 100%; margin-bottom: 10px; padding: 10px;">
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Tell us how we can help..." required style="width: 100%; margin-bottom: 10px; padding: 10px;"></textarea>
+
+          <input type="hidden" name="_next" value="thank-you.html">
+          <button type="submit" style="width: 100%; padding: 12px; background-color: #2c5282; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="back-home-container" style="text-align: center; margin-top: 40px;">
+      <a href="index.html" class="back-home" aria-label="Back to Home" style="text-decoration: none; color: #2c5282;">← Back to Home</a>
     </div>
   </main>
-  
-   <!-- FOOTER -->
-   <footer class="site-footer">
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top: 60px;">
     <div class="footer-content container">
-      <ul class="footer-nav">
+      <ul class="footer-nav" style="display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0;">
         <li><a href="virtual-paralegal-services.html">Services</a></li>
         <li><a href="why-us.html">Why Us</a></li>
         <li><a href="faq.html">FAQ</a></li>
@@ -72,18 +84,16 @@
         <li><a href="software.html">Integrations</a></li>
         <li><a href="careers.html">Careers</a></li>
       </ul>
-      <div class="footer-bottom">
-        <div class="d-flex" style="display: flex; justify-content: space-between; align-items: center;">
-          <p class="mb-0">&copy; 2025 Paralegal Hive. All rights reserved.</p>
-          <a href="index.html">
-            <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="footer-logo">
-          </a>
-        </div>
+      <div class="footer-bottom" style="margin-top: 20px; text-align: center;">
+        <p>&copy; 2025 Paralegal Hive. All rights reserved.</p>
+        <a href="index.html">
+          <img src="images/long-logo-no-background.svg" alt="Paralegal Hive Logo" class="footer-logo" style="margin-top: 10px; height: 200px;">
+        </a>
       </div>
     </div>
   </footer>
 
-  <button id="scrollToTopBtn" aria-label="Scroll to top">↑</button>
+  <button id="scrollToTopBtn" aria-label="Scroll to top" style="position: fixed; bottom: 20px; right: 20px; padding: 10px; font-size: 20px;">↑</button>
 
   <!-- AOS Library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
